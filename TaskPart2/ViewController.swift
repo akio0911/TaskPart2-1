@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func culculate(_ sender: Any) {
         let num1 = Double(textField1.text ?? "" ) ?? 0
         let num2 = Double(textField2.text ?? "" ) ?? 0
-        var result: Double = 0
+        let result: Double
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
@@ -33,11 +33,9 @@ class ViewController: UIViewController {
                 return
             }
             result = num1 / num2
-            
         default:
             return
         }
         label.text = String(result)
     }
 }
-
